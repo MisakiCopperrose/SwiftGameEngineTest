@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F58B75C9276D67A700D3C80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B75C8276D67A700D3C80C /* AppDelegate.swift */; };
-		F58B75CB276D67A700D3C80C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B75CA276D67A700D3C80C /* ViewController.swift */; };
 		F58B75CE276D67A700D3C80C /* Game_Engine_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F58B75CC276D67A700D3C80C /* Game_Engine_Test.xcdatamodeld */; };
 		F58B75D0276D67A800D3C80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58B75CF276D67A800D3C80C /* Assets.xcassets */; };
 		F58B75D3276D67A800D3C80C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58B75D1276D67A800D3C80C /* Main.storyboard */; };
 		F58B75DE276D67A800D3C80C /* Game_Engine_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B75DD276D67A800D3C80C /* Game_Engine_TestTests.swift */; };
 		F58B75E8276D67A800D3C80C /* Game_Engine_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B75E7276D67A800D3C80C /* Game_Engine_TestUITests.swift */; };
 		F58B75EA276D67A800D3C80C /* Game_Engine_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B75E9276D67A800D3C80C /* Game_Engine_TestUITestsLaunchTests.swift */; };
+		F58B75F8276D6C4A00D3C80C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B75F7276D6C4A00D3C80C /* GameView.swift */; };
+		F5D48013276E8D84005D040E /* Myshaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = F5D48012276E8D84005D040E /* Myshaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F58B75C5276D67A700D3C80C /* Game Engine Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58B75C8276D67A700D3C80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F58B75CA276D67A700D3C80C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F58B75CD276D67A700D3C80C /* Game_Engine_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game_Engine_Test.xcdatamodel; sourceTree = "<group>"; };
 		F58B75CF276D67A800D3C80C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58B75D2276D67A800D3C80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		F58B75E3276D67A800D3C80C /* Game Engine TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game Engine TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58B75E7276D67A800D3C80C /* Game_Engine_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Engine_TestUITests.swift; sourceTree = "<group>"; };
 		F58B75E9276D67A800D3C80C /* Game_Engine_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Engine_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F58B75F7276D6C4A00D3C80C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		F5D48012276E8D84005D040E /* Myshaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Myshaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		F58B75C7276D67A700D3C80C /* Game Engine Test */ = {
 			isa = PBXGroup;
 			children = (
-				F58B75C8276D67A700D3C80C /* AppDelegate.swift */,
-				F58B75CA276D67A700D3C80C /* ViewController.swift */,
-				F58B75CF276D67A800D3C80C /* Assets.xcassets */,
+				F58B75F6276D68C700D3C80C /* Other Files */,
 				F58B75D1276D67A800D3C80C /* Main.storyboard */,
-				F58B75D4276D67A800D3C80C /* Game_Engine_Test.entitlements */,
-				F58B75CC276D67A700D3C80C /* Game_Engine_Test.xcdatamodeld */,
+				F58B75F7276D6C4A00D3C80C /* GameView.swift */,
+				F5D48012276E8D84005D040E /* Myshaders.metal */,
 			);
 			path = "Game Engine Test";
 			sourceTree = "<group>";
@@ -124,6 +124,17 @@
 			path = "Game Engine TestUITests";
 			sourceTree = "<group>";
 		};
+		F58B75F6276D68C700D3C80C /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				F58B75C8276D67A700D3C80C /* AppDelegate.swift */,
+				F58B75CF276D67A800D3C80C /* Assets.xcassets */,
+				F58B75D4276D67A800D3C80C /* Game_Engine_Test.entitlements */,
+				F58B75CC276D67A700D3C80C /* Game_Engine_Test.xcdatamodeld */,
+			);
+			path = "Other Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +143,7 @@
 			buildConfigurationList = F58B75ED276D67A800D3C80C /* Build configuration list for PBXNativeTarget "Game Engine Test" */;
 			buildPhases = (
 				F58B75C1276D67A700D3C80C /* Sources */,
+				F55D71FA276E976500D8AB65 /* ShellScript */,
 				F58B75C2276D67A700D3C80C /* Frameworks */,
 				F58B75C3276D67A700D3C80C /* Resources */,
 			);
@@ -249,13 +261,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F55D71FA276E976500D8AB65 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F58B75C1276D67A700D3C80C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F58B75CB276D67A700D3C80C /* ViewController.swift in Sources */,
+				F5D48013276E8D84005D040E /* Myshaders.metal in Sources */,
 				F58B75CE276D67A700D3C80C /* Game_Engine_Test.xcdatamodeld in Sources */,
+				F58B75F8276D6C4A00D3C80C /* GameView.swift in Sources */,
 				F58B75C9276D67A700D3C80C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +457,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Game Engine Test/Game_Engine_Test.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Game Engine Test/Other Files/Game_Engine_Test.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -451,7 +485,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Game Engine Test/Game_Engine_Test.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Game Engine Test/Other Files/Game_Engine_Test.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
